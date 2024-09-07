@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seats</title>
+    <style>
+        body {
+          width:97.5%;
+          margin: 0px;
+          background-color: rgb(146, 146, 146,0.2);
+          opacity: 0.9;
+          background-repeat: repeat-x;
+          }
+        .header {
+          position: fixed;
+          padding:1% ;
+          padding-right: 30%;
+          background-color: rgba(0, 0, 0);
+          color: rgb(215, 69, 29);
+          text-align:center;
+          width:100%;
+        }
+        .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%;    
+          text-align:center;
+          background-image:  rgb(0, 0, 0);
+          color: rgb(215, 69, 29);
+        }
+        .theater {
+          display: block;
+          position: relative;
+          padding-left: 38px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 6px;
+        }
+        .theater input {
+          position: absolute;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          display:none;
+          border-radius: 6px;
+        }
+        .seats {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 30px;
+          width: 30px;
+          background-color:lightgray;
+          border-radius: 6px;
+          border-width: 2px;
+        }
+        .theater:hover input ~ .seats {
+          background-color: grey;
+          height:33px;
+          width:33px;
+          border-radius: 6px;
+        }
+        .theater input:checked ~ .seats {
+          background-color: rgb(74, 93, 112);
+          border-radius: 6px;
+        }
+        .table{
+          position:absolute;
+          padding-left: 35%;
+          padding-top: 14%;
+          border-radius: 6px;
+        }
+        .dis{
+          text-align: center;
+          padding-top: 40%;
+          padding-left: 3%;
+          text-shadow:2px 2px 10px black;
+        }
+        .button {
+          background-color: rgb(215, 69, 29);
+          border: none;
+          height: 30px;
+          width: 150px;
+          color: white;
+          text-align: center;
+          font-size: 16px;
+          opacity: 0.7;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 5px ;
+        }
+        .button:hover {
+          opacity: 1
+        }
+        .button2:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .button:active {
+          box-shadow: 0 5px 16px #666;
+          transform: translateY(4px);
+        }
+      </style>
+</head>
+<body>
+    <div class="header" id="myHeader">
+      <img src="logo.png" style="width:100px;height:120px;float:left">
+      <p style="font-size: 40px;font-style: italic;padding-left: 30px;">Book Your Show<a href="nowplaying.html" style="float:right;color: white;margin-right: 30px;">&larr;Back</a>
+    </p>
+    </div>
+    <div class="table">
+      <h1 style="font-style: italic;padding-left: 26%;font-size: 30px;">Select your Seats</h1>
+      <table>
+        <tr> 
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a1">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a2">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a3">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a4">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a5">
+            <span class="seats"></span>
+          </label></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a6">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a7">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a8">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a9">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="a10">
+            <span class="seats"></span>
+          </label></td>
+        </tr>
+        <tr>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b1">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b2">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b3">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b4">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b5">
+            <span class="seats"></span>
+          </label></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b6">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b7">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b8">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b9">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="b10">
+            <span class="seats"></span>
+          </label></td>
+        </tr>
+        <tr>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c1">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c2">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c3">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c4">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c5">
+            <span class="seats"></span>
+          </label></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c6">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c7">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c8">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c9">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="premium" value="c10">
+            <span class="seats"></span>
+          </label></td>
+        </tr>
+        <tr>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d1">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d2">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d3">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d4">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d5">
+            <span class="seats"></span>
+          </label></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d6">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d7">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d8">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d9">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="d10">
+            <span class="seats"></span>
+          </label></td>
+        </tr>
+        <tr>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e1">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e2">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e3">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e4">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e5">
+            <span class="seats"></span>
+          </label></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e6">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e7">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e8">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e9">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="e10">
+            <span class="seats"></span>
+          </label></td>
+        </tr>
+        <tr>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f1">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f2">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f3">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f4">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f5">
+            <span class="seats"></span>
+          </label></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f6">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f7">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f8">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f9">
+            <span class="seats"></span>
+          </label></td>
+          <td><label class="theater">&nbsp;
+            <input type="checkbox" class="checkbox" id="gold" value="f10">
+            <span class="seats"></span>
+          </label></td>
+        </tr>
+      </table>
+      <h3 style="padding-left: 39%;">Screen Side</h3>
+    </div>
+    <div class="dis" id="disable" style="display:none">
+      <p>
+        <span>selected seats:</span>
+        <span id="selected">0</span>&nbsp;
+      </p>   
+      <p>
+        <span>Amount to be Paid: </span>
+        <span id="amount"></span>
+      </p>
+      <a href="payment.html"><button class="button button2">Book Tickets</button></a>
+    </div>
+      <script>
+        window.onscroll = function() {myFunction()};
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+      </script>
+      <script>
+        var checkboxes =document.querySelectorAll('.checkbox');
+        var count = 0;
+        var amount = 0;
+        for (var i=0; i<checkboxes.length; i++) {
+          checkboxes[i].addEventListener('click',function(){
+            if(this.checked == true){
+              count++;
+            }
+            else{
+              count--;
+            }
+            document.getElementById('selected').innerHTML = count;
+            if (count>0) {
+            document.getElementById('disable').style.display = 'block';
+          } 
+          else{
+            document.getElementById('disable').style.display = 'none';
+          }
+          })
+        }
+        
+      </script>
+       <script>
+        var totalp=document.querySelectorAll('#premium');
+        var amount = 0;
+        for (var i=0; i<totalp.length; i++) {
+          totalp[i].addEventListener('click',function(){
+            if(this.checked == true){
+              amount=amount+250;
+            }
+            else{
+              amount=amount-250;
+            }
+            document.getElementById('amount').innerHTML = amount;
+          })
+        }
+        
+      </script>
+      <script>
+        var totalg=document.querySelectorAll('#gold');
+        var amount = 0;
+        for (var i=0; i<totalg.length; i++) {
+          totalg[i].addEventListener('click',function(){
+            if(this.checked == true){
+              amount=amount+150;
+            }
+            else{
+              amount=amount-150;
+            }
+            document.getElementById('amount').innerHTML = amount;
+          })
+        }
+      </script>
+</body>
+</html>

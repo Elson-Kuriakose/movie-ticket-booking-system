@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"> 
+<title></title>
+<style>
+.site-footer
+{
+  padding-top :45px;
+  padding-bottom: -20px;
+  font-size:15px;
+  margin-bottom: -600px;
+  line-height:24px;
+  opacity: transparent;
+}
+.site-footer p{
+  color:white;
+  font-size: large;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#ffffff;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+body {
+margin: 0;
+background-image: url(https://i.pinimg.com/originals/a8/6b/b4/a86bb481f4b1ea53c9b0582f198c07be.jpg);
+
+}
+
+.header {
+padding:10px 16px;
+background:linear-gradient(rgb(0, 0, 0),black,rgb(255, 255, 255));
+color: #ffffff;
+text-align:center;
+height:100px;
+width:100%;
+}
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+text-align: center;
+}
+* {
+box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.column {
+float: left;
+width: 25%;
+padding: 0 10px ;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+margin: 90px 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+.column {
+width: 100%;
+display: block;
+margin-bottom: 20px;
+}
+}
+
+/* Style the counter cards */
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 16px;
+text-align: center;
+background-color: #f1f1f1;
+border-radius: 10px;
+
+}
+.container {
+padding: 2px 16px;
+}
+hr {
+border-top: 1px dashed rgb(0, 0, 0);
+}
+.button {
+border: none;
+color: white;
+padding: 10px 52px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+
+cursor: pointer;
+}
+
+.button1 {
+background-color: white; 
+color: black; 
+border: 2px solid #000000;
+border-radius: 10px;
+margin-bottom: 0.2cm;
+
+}
+
+.button2 {
+background-color: white; 
+color: black; 
+border: 2px solid #000000;
+border-radius: 10px;
+padding-left: 77px;
+padding-right: 77px;
+}
+</style>
+</head>
+<body>
+<script language="javascript">
+function SelectRedirect(){
+// ON selection of section this function will work
+//alert( document.getElementById('s1').value);
+
+switch(document.getElementById('city').value)
+{
+case "coimbatore":
+window.location="coimbatore.html"
+break;
+case "vellore":
+window.location="vellore.html";
+break;
+case "chennai":
+window.location="chennai.html";
+break;
+case "ooty":
+window.location="ooty.html";
+break;
+case "madurai":
+window.location="madurai.html";
+break;
+
+/// Can be extended to other different selections of SubCategory //////
+default:
+window.location="nowplaying.html"; // if no selection matches then redirected to home page
+break;
+}// end of switch 
+}
+////////////////// 
+
+</script>
+<div class="header" id="myHeader">
+<img src="logo.png" style="width:120px;height:80px;float:left;"> <!--change width height and img -->
+<center><p style="font-size: 300%;font-family:'ISOCPEUR';position: absolute;top: -29px;right: 650px;">TRENDING NOW</p></center>
+<form>
+<select name="section" onchange="SelectRedirect()" id="city" style="width:200px; height:30px; border-radius: 5px; font-style: oblique; font-family: american typewriter; position: absolute;top: 34px;right: 90px;" >
+<Option value="select">Select city</option>
+<Option value="coimbatore">coimbatore</option>
+<Option value="vellore">vellore</option>
+<Option value="chennai">chennai</option>
+<Option value="ooty">ooty</option>
+<Option value="madurai">madurai</option>
+</select>
+</form>
+</div>
+
+
+
+<div class="row">
+<div class="column">
+<div class="card">
+<img src="https://pbs.twimg.com/media/E57obaLUUAE48xs.jpg:large" alt="Avatar" style="width:100%">
+<div class="container">
+<h4><b>VIKRAM</b></h4><hr> 
+<button class="button button2"><a href="vikram.html" style="text-decoration:none;">
+About <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+  </svg>
+</a></button>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<div class="card">
+<img src="https://wallpapercave.com/wp/wp5204046.jpg" alt="Avatar" style="width:100%">
+<div class="container">
+<h4><b>KGF-2</b></h4><hr> 
+<button class="button button2"><a href="kgf2.html" style="text-decoration:none;">
+About <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>
+</a></button>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="column">
+<div class="card">
+<img src="https://www.themoviedb.org/t/p/original/u0XUBNQWlOvrh0Gd97ARGpIkL0.jpg" alt="Avatar" style="width:100%">
+<div class="container">
+<h4><b>RRR</b></h4><hr> 
+<button class="button button2"><a href="RRR.html" style="text-decoration:none;">
+About <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>
+</a></button>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<div class="card">
+<img src="https://pbs.twimg.com/media/FH762YqXIAE5L6-?format=jpg&name=medium" alt="Avatar" style="width:100%">
+<div class="container">
+<h4><b>BEAST</b></h4><hr> 
+<button class="button button2"><a href="beast.html" style="text-decoration:none;">
+About <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>
+</a></button>
+</div>
+</div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+if (window.pageYOffset > sticky) {
+header.classList.add("sticky");
+} else {
+header.classList.remove("sticky");
+}
+}
+</script>
+
+</body>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <p class="text-justify"></p>
+      </div>
+
+
+      <div class="col-xs-6 col-md-3">
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/"></a></li>
+          <li><a href="http://scanfcode.com/contact/"></a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/"></a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/"></a></li>
+          <li><a href="http://scanfcode.com/sitemap/"></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by BOOKYOURSHOW.</p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" target="_blank" href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>

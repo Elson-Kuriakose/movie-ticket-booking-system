@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style>
+  video {
+    min-width: 100%;
+    height: 400px;
+    object-fit: fill;
+  }
+
+  ul li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline;
+    padding: 30px;
+    margin: 20px;
+  }
+
+  nav {
+    background-color: #eaedf1;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px;
+    border: 10px;
+  }
+
+  nav ul li .per {
+    float: right;
+  }
+
+  .ggg li:nth-child(3) {
+    position: absolute;
+    top: 390px;
+    left: 1000px;
+
+    overflow: hidden;
+  }
+
+  .ggg li:nth-child(4) {
+    position: absolute;
+    top: 390px;
+    left: 1200px;
+
+    overflow: hidden;
+  }
+
+  .ggg li:nth-child(5) {
+    position: absolute;
+    top: 390px;
+    left: 1300px;
+
+    overflow: hidden;
+  }
+
+  .ggg li:nth-child(2) {
+    position: absolute;
+    top: 390px;
+    left: 1150px;
+    color: #00aced;
+    font-size: larger;
+  }
+
+  .contain {
+    align-items: center;
+    justify-content: center;
+    margin: 60px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 60px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+
+  .sp {
+    padding: 20px;
+    border: 12px;
+  }
+
+  .pi img {
+    border-radius: 50%;
+    width: 103px;
+    height: 100px;
+    margin-left: 90px;
+  }
+
+  button {
+    border: none;
+    padding: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  button:hover {
+    background-color: #00aced;
+    color: white;
+  }
+
+  #demo {
+    position: absolute;
+    top: 450px;
+    left: 1190px;
+  }
+
+  #container {
+    height: 100%;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: grid;
+    place-items: center;
+  }
+
+  #slider-container {
+    height: 300px;
+    width: 85vw;
+    max-width: 1400px;
+    background: white;
+
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  #slider-container .btn:hover {
+    transform: scale(1.2);
+  }
+
+  #slider-container .btn.inactive {
+    border-color: rgb(153, 121, 126);
+  }
+
+  #slider-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px;
+  }
+
+  #slider-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
+  }
+
+  #slider-container #slider {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+
+    transition: all 0.5s;
+  }
+
+  #slider-container #slider .slide {
+    height: 90%;
+    margin: 30px;
+    background-size: cover;
+    position: relative;
+    top: 0px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    display: grid;
+    place-items: center;
+  }
+
+  #slider-container .btn {
+    position: absolute;
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border-left: 8px solid #00aced;
+    border-top: 8px solid #00aced;
+    z-index: 1;
+  }
+
+  #slider-container #slider .slide span {
+    color: white;
+    font-size: 150px;
+  }
+
+  @media only screen and (min-width: 900px) {
+    #slider-container #slider .slide {
+      width: calc(2.5% - 20px);
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    #slider-container #slider .slide {
+      width: calc(3.3333333% - 20px);
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    #slider-container #slider .slide {
+      width: calc(5% - 20px);
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    #slider-container #slider .slide {
+      width: calc(10% - 20px);
+    }
+  }
+
+  .caste>ul {
+    margin-left: 90px;
+  }
+</style>
+
+<body>
+  <div class="vi">
+    <video controls loop>
+      <source src="RRRvideo.mp4">
+    </video>
+  </div>
+
+  <nav class="ggg">
+    <ul>
+      <li style="
+            border-bottom: 4px solid #00aced;
+            text-transform: capitalize;
+            font-size: large;
+          ">
+        About movie
+      </li>
+      <li class="fa fa-thumbs-up"></li>
+
+      <li>❤ 95%<br />Liked this movie</li>
+      <li>
+        <button type="button" value="like" onclick="like()">like</button>
+      </li>
+      <li>
+        <button type="button" value="dislike" onclick="dis()">dislike</button>
+      </li>
+    </ul>
+  </nav>
+  <p id="demo">1323</p>
+  <div class="contain">
+    <h3>Synopsis</h3>
+    <p>
+      RRR is a 2022 Indian Telugu-language epic action drama film directed by S. S. Rajamouli who wrote the film with V.
+      Vijayendra Prasad. It is produced by D. V. V. Danayya of DVV Entertainment. The film stars N. T. Rama Rao Jr., Ram
+      Charan, Ajay Devgn, Alia Bhatt, Shriya Saran, Samuthirakani, Ray Stevenson, Alison Doody, and Olivia Morris. It is
+      a fictional story about two real-life Indian revolutionaries, Alluri Sitarama Raju (Charan) and Komaram Bheem
+      (Rama Rao), and their fight against the British Raj. Set in 1920, the plot explores the undocumented period in
+      their lives when both the revolutionaries chose to go into oblivion before they began the fight for their country
+    </p>
+    <br /><br />
+    <h3>POSTERS</h3>
+    <br /><br />
+    <div id="container">
+      <div id="slider-container">
+        <span onclick="slideRight()" class="btn"></span>
+        <div id="slider">
+          <div class="slide">
+            <img src="https://i.pinimg.com/736x/51/1d/aa/511daa713c9a0a1657aacf3a275e0cde.jpg" width="300px"
+              height="200px" />
+          </div>
+          <div class="slide">
+            <img
+              src="https://1.bp.blogspot.com/-LUQkwDbtolg/YKX3z6n2dvI/AAAAAAAAFxU/PtGKMdbTc3oEu8nngyWlhDSnlf2xRE6xACLcBGAsYHQ/s0/HDgallery%2BKommaram%2BBheem%2Bnew%2BHD%2BStill.jpg"
+              width="300px" height="200px" />
+          </div>
+          <div class="slide">
+            <img src="https://wallpapercave.com/wp/wp8328112.jpg" width="300px" height="200px" />
+          </div>
+          <div class="slide">
+            <img src="https://wallpapercave.com/wp/wp10944810.jpg" width="300px" height="200px" />
+          </div>
+          <div class="slide">
+            <img
+              src="https://1.bp.blogspot.com/-h9tIfZzttCc/YF3xYET8aqI/AAAAAAAAH7o/1mgfzOPjSikUcoZW3tngJyKvGa_txKp8QCLcBGAsYHQ/s0/Allurisitaramaraju%2Bnew%2Bstill%2B.jpg"
+              width="300px" height="200px" />
+          </div>
+          <div class="slide">
+            <img src="https://cdn.bollywoodmdb.com/movies/largethumb/2020/rrr/rrr-poster-10.jpg" width="300px"
+              height="200px" />
+          </div>
+          <div class="slide">
+            <img src="https://i.pinimg.com/originals/79/91/6c/79916ca9a29d4bdaec8462f55dc98b44.png" width="300px"
+              height="200px" />
+          </div>
+          <div class="slide">
+            <img src="https://www.filmibeat.com/ph-big/2021/11/rrr_163661840120.jpg" width="300px" height="200px" />
+          </div>
+          <div class="slide">
+            <img
+              src="https://static-ai.asianetnews.com/images/01fp7fagrzeyrkt5vnrpmaf5jr/whatsapp-image-2021-12-06-at-1-38-43-pm_710x400xt.jpg"
+              width="300px" height="200px" />
+          </div>
+          <div class="slide">
+            <img src="https://w0.peakpx.com/wallpaper/109/633/HD-wallpaper-rrr-jr-ntr-ram-charan.jpg" width="300px"
+              height="200px" />
+          </div>
+        </div>
+        <span onclick="slideLeft()" class="btn"></span>
+      </div>
+    </div>
+    <h3>Lead cast</h3>
+    <div class="pi">
+      <img
+        src="https://www.deccanherald.com/sites/dh/files/articleimages/2022/03/27/charanbirthday-1095059-1648356321.png" />
+      <img
+        src="https://m.economictimes.com/thumb/msid-91684505,width-1200,height-900,resizemode-4,imgsize-53816/jr-ntr.jpg" />
+      <img src="https://i2.cinestaan.com/image-bank/1500-1500/202001-203000/202165.jpg" />
+      <img
+        src="https://assets.vogue.in/photos/622f9af651da11b2e5b0b176/2:3/w_752,h_1128,c_limit/7%20times%20Alia%20Bhatt%20served%20sublime%20beauty%20moments%20.jpg" />
+      <img src="https://www.themoviedb.org/t/p/w500/iAzUTXzFWwEkRx6Ygudqnx4DmtW.jpg" />
+      <img src="https://celebsecrets.in/wp-content/uploads/2020/07/shriya-saran.jpg" />
+    </div>
+    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ram Charan&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Jr
+      NTR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ajay Devgn&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Alia Bhatt&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Olivia Morris&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Shriya Saran
+    </p>
+
+
+
+
+
+  </div>
+
+  </div>
+
+  <script>
+    var container = document.getElementById("container");
+    var slider = document.getElementById("slider");
+    var slides = document.getElementsByClassName("slide").length;
+    var buttons = document.getElementsByClassName("btn");
+
+    var currentPosition = 0;
+    var currentMargin = 0;
+    var slidesPerPage = 0;
+    var slidesCount = slides - slidesPerPage;
+    var containerWidth = container.offsetWidth;
+    var prevKeyActive = false;
+    var nextKeyActive = true;
+
+    window.addEventListener("resize", checkWidth);
+
+    function checkWidth() {
+      containerWidth = container.offsetWidth;
+      setParams(containerWidth);
+    }
+
+    function setParams(w) {
+      if (w < 551) {
+        slidesPerPage = 1;
+      } else {
+        if (w < 901) {
+          slidesPerPage = 2;
+        } else {
+          if (w < 1101) {
+            slidesPerPage = 3;
+          } else {
+            slidesPerPage = 4;
+          }
+        }
+      }
+      slidesCount = slides - slidesPerPage;
+      if (currentPosition > slidesCount) {
+        currentPosition -= slidesPerPage;
+      }
+      currentMargin = -currentPosition * (100 / slidesPerPage);
+      slider.style.marginLeft = currentMargin + "%";
+      if (currentPosition > 0) {
+        buttons[0].classList.remove("inactive");
+      }
+      if (currentPosition < slidesCount) {
+        buttons[1].classList.remove("inactive");
+      }
+      if (currentPosition >= slidesCount) {
+        buttons[1].classList.add("inactive");
+      }
+    }
+
+    setParams();
+
+    function slideRight() {
+      if (currentPosition != 0) {
+        slider.style.marginLeft = currentMargin + 100 / slidesPerPage + "%";
+        currentMargin += 100 / slidesPerPage;
+        currentPosition--;
+      }
+      if (currentPosition === 0) {
+        buttons[0].classList.add("inactive");
+      }
+      if (currentPosition < slidesCount) {
+        buttons[1].classList.remove("inactive");
+      }
+    }
+
+    function slideLeft() {
+      if (currentPosition != slidesCount) {
+        slider.style.marginLeft = currentMargin - 100 / slidesPerPage + "%";
+        currentMargin -= 100 / slidesPerPage;
+        currentPosition++;
+      }
+      if (currentPosition == slidesCount) {
+        buttons[1].classList.add("inactive");
+      }
+      if (currentPosition > 0) {
+        buttons[0].classList.remove("inactive");
+      }
+    }
+    let c = 1323;
+    function like() {
+      c++;
+      document.getElementById("demo").innerHTML = c;
+    }
+    dis = () => {
+      c--;
+      document.getElementById("demo").innerHTML = c;
+    };
+  </script>
+</body>
+
+</html>

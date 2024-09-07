@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" type="text/css" href="payment.css">
+    <script type="text/javascript">
+        function ValidateForm(){
+            var status = false;
+            var name1 =  document.paymentform.ccnumber.value;
+            if (name1.length < 1){
+                document.getElementById("ccnumber").innerHTML = "Please Enter this value,";
+                status = true;
+            }
+            if (document.paymentform.phonenumber.value.length != 10){
+                status = true;
+            }
+            if (document.paymentform.phonenumber.value.cvv1.length != 3){
+                status = true;
+            }
+            if (status == false){
+                document.location("success.html");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="top">
+        <b>PAYMENT</b>
+    </div>
+<header>
+    <div class="container">
+        <div class="right">
+            <h3>PAYMENT</h3>
+            <form name="paymentform"  action="success.html"  onsubmit="return  Validateform()" method="post">
+                Accepted Cards
+                <br>
+                <br>
+                <img src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Emblem.jpg" width="70" height="50">
+                <img src="https://imageio.forbes.com/blogs-images/steveolenski/files/2016/07/Mastercard_new_logo-1200x865.jpg?format=jpg&width=960" width="70" height="50">
+                <img src="https://www.oneindia.com/img/1200x80/2017/05/paytm-310517-31-1496211262.jpg" width="70" height="50">
+                <br><br>
+                
+                Card Number
+                <input type="text" name="ccnumber" maxlength="16" placeholder="Enter CC Number" required>
+
+                Phone Number
+                <input type="text" name="phonenumber"maxlength="10" placeholder="Enter phone" required>
+                <div id="zip">
+                    <label>
+                        Expiry Year
+                        <select>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                        </select>
+                    
+        <br>
+        
+                    Month:
+                    <select>
+        
+      <option value="January">January</option>
+      <option value="Febuary">Febuary</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+      <label for="Year">Year:</label>
+    </select>
+    </label>
+                    <label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV
+                        <input type="text" name="cvv1" placeholder="CVV" maxlength="3" required>
+                    </label>
+                </div>
+                <input type="submit" name="" value="Proceed to Buy">
+            </form>
+        
+
+        </div>     
+    </div>
+</header>
+</body>
+</html>

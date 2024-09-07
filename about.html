@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+    .vi video{
+        width: 100%;
+        height: 360px;
+    }
+    ul li{
+        list-style-type: none;
+        text-decoration: none;
+        display: inline;
+        padding: 30px;
+        margin: 20px;
+    }
+    nav{
+        background-color: #eaedf1;
+        padding: 15px;
+        border-radius: 15px;
+        margin: 10px;
+        border: 10px;
+    }
+    nav ul li .per{
+        float: right;
+    }
+    .ggg li:nth-child(3){
+        
+        position: absolute;
+        top: 350px;
+        left: 1000px;
+       
+        overflow: hidden;
+        
+
+    }
+    .ggg li:nth-child(4){
+        
+        position: absolute;
+        top: 350px;
+        left: 1190px;
+        
+        overflow: hidden;
+        
+
+    }
+    .ggg li:nth-child(5){
+        
+        position: absolute;
+        top: 350px;
+        left: 1300px;
+        
+        overflow: hidden;
+        
+
+    }
+    .ggg li:nth-child(2){
+        position: absolute;
+        top:360px;
+        left:1150px;
+        color: #00aced;
+        font-size: larger;
+    }
+    
+    .contain{
+        align-items: center;
+        justify-content: center;
+        margin: 60px;
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+        padding: 60px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .sp{
+        padding: 20px;
+        border: 12px;
+        
+    }
+    .pi img{
+        border-radius: 50%;
+        width: 103px;
+        height: 100px;
+        margin-left: 90px;
+    }
+    
+    
+    button{
+        border: none;
+        padding: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+    button:hover{
+        background-color: #00aced;
+        color: white;
+    }
+    #demo{
+        position: absolute;
+        top:410px;
+        left: 1190px;
+    }
+    #container {
+  height: 100%;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: grid ;
+  place-items: center
+}
+
+#slider-container {
+  height: 270px;
+  width: 80vw;
+  max-width: 1400px;
+  background: white;
+  
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+
+
+#slider-container .btn:hover {
+  transform: scale(1.2);
+}
+
+#slider-container .btn.inactive {
+  border-color: rgb(153, 121, 126)
+}
+
+#slider-container .btn:first-of-type {
+  transform: rotate(-45deg);
+  left: 10px
+}
+
+#slider-container .btn:last-of-type {
+  transform: rotate(135deg);
+  right: 10px;
+}
+
+#slider-container #slider {
+  display: flex;
+  width: 1000%;
+  height: 100%; 
+  
+  transition: all .5s;
+}
+
+#slider-container #slider .slide {
+  height: 90%;
+  margin: 30px;
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+  
+  display: grid;
+  place-items: center;
+}
+#slider-container .btn {
+  position: absolute;
+  top: calc(50% - 30px);
+  height: 30px;
+  width: 30px;
+  border-left: 8px solid #00aced;
+  border-top: 8px solid #00aced;
+  z-index: 1;
+}
+
+#slider-container #slider .slide span {
+  color: white;
+  font-size: 150px;
+}
+
+@media only screen and (min-width: 1100px) {
+
+  #slider-container #slider .slide {
+    width: calc(2.5% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+  #slider-container #slider .slide {
+    width: calc(3.3333333% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  #slider-container #slider .slide {
+    width: calc(5% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  #slider-container #slider .slide {
+    width: calc(10% - 20px);
+  }
+
+}
+
+</style>
+<body>
+    <div class="vi">
+        <video controls>
+            <source src="">
+        </video>
+    </div>
+    <nav class="ggg">
+        <ul>
+            <li>About movie</li>
+            <li class="fa fa-thumbs-up"></li>
+            
+            <li>❤️ 95%<br>Liked this movie</li>
+            <li><button type="button" value="like" onclick="like()">like</button></li>
+            <li><button type="button" value="dislike">dislike</button></li>
+            
+        </ul>
+    </nav>
+    <p id="demo">
+        1323
+    </p>
+    <div class="contain">
+        <h3>Synopsis</h3>
+        <p>Vikram is an Indian Tamil-language action thriller film written and directed by Lokesh Kanagaraj and produced by Raaj Kamal Films International. The film features Kamal Haasan in the lead role.</p>
+        <br><br>
+        <h3>Videos</h3>
+        <br><br>
+        <div id="container">
+            <div id="slider-container">
+              <span onclick="slideRight()" class="btn"></span>
+                <div id="slider">
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+                  <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="270px" height="190px"><p><br>SURYA</p></div>
+              </div>
+              <span onclick="slideLeft()" class="btn"></span>
+            </div>
+          </div>
+        <h3>Lead caste</h3>
+        <div class="pi">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+        </div>
+        <p>
+
+        </p>
+
+    </div>
+    <script>
+        var container = document.getElementById('container')
+var slider = document.getElementById('slider');
+var slides = document.getElementsByClassName('slide').length;
+var buttons = document.getElementsByClassName('btn');
+
+
+var currentPosition = 0;
+var currentMargin = 0;
+var slidesPerPage = 0;
+var slidesCount = slides - slidesPerPage;
+var containerWidth = container.offsetWidth;
+var prevKeyActive = false;
+var nextKeyActive = true;
+
+window.addEventListener("resize", checkWidth);
+
+function checkWidth() {
+    containerWidth = container.offsetWidth;
+    setParams(containerWidth);
+}
+
+function setParams(w) {
+    if (w < 551) {
+        slidesPerPage = 1;
+    } else {
+        if (w < 901) {
+            slidesPerPage = 2;
+        } else {
+            if (w < 1101) {
+                slidesPerPage = 3;
+            } else {
+                slidesPerPage = 4;
+            }
+        }
+    }
+    slidesCount = slides - slidesPerPage;
+    if (currentPosition > slidesCount) {
+        currentPosition -= slidesPerPage;
+    };
+    currentMargin = - currentPosition * (100 / slidesPerPage);
+    slider.style.marginLeft = currentMargin + '%';
+    if (currentPosition > 0) {
+        buttons[0].classList.remove('inactive');
+    }
+    if (currentPosition < slidesCount) {
+        buttons[1].classList.remove('inactive');
+    }
+    if (currentPosition >= slidesCount) {
+        buttons[1].classList.add('inactive');
+    }
+}
+
+setParams();
+
+function slideRight() {
+    if (currentPosition != 0) {
+        slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
+        currentMargin += (100 / slidesPerPage);
+        currentPosition--;
+    };
+    if (currentPosition === 0) {
+        buttons[0].classList.add('inactive');
+    }
+    if (currentPosition < slidesCount) {
+        buttons[1].classList.remove('inactive');
+    }
+};
+
+function slideLeft() {
+    if (currentPosition != slidesCount) {
+        slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
+        currentMargin -= (100 / slidesPerPage);
+        currentPosition++;
+    };
+    if (currentPosition == slidesCount) {
+        buttons[1].classList.add('inactive');
+    }
+    if (currentPosition > 0) {
+        buttons[0].classList.remove('inactive');
+    }
+};
+let c=1323;
+function like(){
+    c++;
+    document.getElementById("demo").innerHTML=c;
+    
+
+}
+        
+    </script>
+
+</body>
+</html>
